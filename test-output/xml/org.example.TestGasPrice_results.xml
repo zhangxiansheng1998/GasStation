@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="AllCase"
+           tests="6"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="15.488">
+  <properties />
+  
+  
+            <testcase name="Login" time="1.418" classname="cases.GasPrice" />
+                <testcase name="GasPriceEdit" time="4.949" classname="cases.GasPrice" />
+                <testcase name="DeleteWeeklyActivity" time="3.698" classname="cases.GasPrice" />
+                <testcase name="ModifyGasPrice" time="2.024" classname="cases.GasPrice" />
+                <testcase name="AddZeroDieselPrice" time="2.049" classname="cases.GasPrice" />
+                <testcase name="AddWeeklyActivity" time="1.350" classname="cases.GasPrice" />
+      
+</testsuite>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="AllCase"
+           tests="5"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="16.727">
+  <properties />
+  
+  
+            <testcase name="Login" time="1.293" classname="cases.GasGun" />
+                <testcase name="ForbidGasGun" time="1.638" classname="cases.GasGun" />
+                <testcase name="GasGunEdit" time="7.413" classname="cases.GasGun" />
+                <testcase name="DeleteGasGun" time="3.567" classname="cases.GasGun" />
+                <testcase name="AddGasGun" time="2.816" classname="cases.GasGun" />
+      
+</testsuite>

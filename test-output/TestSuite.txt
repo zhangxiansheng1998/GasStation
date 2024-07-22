@@ -1,0 +1,9 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 18, Failures: 1, Errors: 0, Skipped: 3, Time elapsed: 62.946 sec <<< FAILURE! - in TestSuite
+GasGunEdit(cases.GasGun)  Time elapsed: 4.638 sec  <<< FAILURE!
+java.lang.AssertionError: null
+	at tools.Browser.Assert(Browser.java:245)
+	at cases.GasGun.GasGunEdit(GasGun.java:44)
+
