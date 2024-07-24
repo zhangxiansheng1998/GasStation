@@ -46,7 +46,7 @@ public class SendEmailWithHtmlAttachment {
             MimeBodyPart attachmentPart = new MimeBodyPart();
             DataSource fds = new FileDataSource(new File(htmlFilePath));
             attachmentPart.setDataHandler(new DataHandler(fds));
-            attachmentPart.setFileName("attached-file.html");
+            attachmentPart.setFileName("测试报告.html");
 
             // 将正文和附件添加到多部分消息中
             MimeMultipart multipart = new MimeMultipart();
