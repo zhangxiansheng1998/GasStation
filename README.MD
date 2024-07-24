@@ -1,20 +1,27 @@
 
 修改过的功能
 
-1.修改测试报告的接口先后顺序显示问题-顺序排序（只针对reportng生成的测试报告）
+1.ZTestReport：新增字段passRate
 
-包名：reportng-1.1.4.jar
-类名：org.uncommons.reportng.TestResultComparator
+    double rawPassRate =  (double) testsPass / (testsPass + testsFail);
+    result.put("passRate", String.format("%.1f%%", rawPassRate * 100));
 
-    public int compare(ITestResult result1, ITestResult result2) {
-        int longresult2 = false;
-        byte longresult2;
-        if (result1.getStartMillis() < result2.getStartMillis()) {
-            longresult2 = -1;
-        } else {
-            longresult2 = 1;
-        }
-        return longresult2;
-    }
 
+2.template：报告模板中新增"成功率"
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label text-navy">成功率:</label>
+        <div class="col-sm-5">
+            <span class="form-control" id="passRate"></span>
+        </div>
+    </div>
+
+    $("#passRate").text(resultData["passRate"]);
+
+
+3.pom：新增参数
+
+A.忽略testng执行测试用例时报错，会继续执行后面的函数
+
+    <testFailureIgnore>true</testFailureIgnore>
 
