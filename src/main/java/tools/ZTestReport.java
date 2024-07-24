@@ -22,6 +22,8 @@ public class ZTestReport implements IReporter {
 
 	private int testsSkip = 0;
 
+	private String passRate;
+
 	private String beginTime;
 
 	private double totalTime;
@@ -128,6 +130,10 @@ public class ZTestReport implements IReporter {
 			result.put("testFail", testsFail);
 			result.put("testSkip", testsSkip);
 			result.put("testAll", testsPass + testsFail + testsSkip);
+
+			double rawPassRate =  (double) testsPass / (testsPass + testsFail);
+			result.put("passRate", String.format("%.1f%%", rawPassRate * 100));
+
 			result.put("beginTime", beginTime);
 			result.put("totalTime", totalTime + "s");
 			result.put("testResult", listInfo);

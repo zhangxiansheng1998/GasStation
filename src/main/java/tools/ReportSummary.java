@@ -88,7 +88,6 @@ public class ReportSummary {
         }
 
         ModifyEmail();
-        System.out.println("已经执行ReportSummary类");
     }
     public static void ModifyEmail(){
 

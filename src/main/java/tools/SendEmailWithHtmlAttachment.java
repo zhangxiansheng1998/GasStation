@@ -87,6 +87,5 @@ public class SendEmailWithHtmlAttachment {
         String emailFilePath = "/Users/macbook_air/Desktop/Backup/Automation/GasStation/src/main/java/tools/email_template.html";
         String htmlContent = readFileToString(emailFilePath);
         sendEmailWithHtmlAttachment(recipientEmail, subject, htmlContent, htmlFilePath);
-        System.out.println("已经执行SendEmailWithHtmlAttachment类");
     }
 }

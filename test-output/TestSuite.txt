@@ -1,16 +1,16 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 23, Failures: 3, Errors: 0, Skipped: 5, Time elapsed: 94.621 sec <<< FAILURE! - in TestSuite
-ModifyGasPrice(cases.GasPrice)  Time elapsed: 10.805 sec  <<< FAILURE!
+Tests run: 23, Failures: 2, Errors: 0, Skipped: 5, Time elapsed: 68.711 sec <<< FAILURE! - in TestSuite
+ModifyGasPrice(cases.GasPrice)  Time elapsed: 10.614 sec  <<< FAILURE!
 java.lang.AssertionError: An exception occurred: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[1]/div[2]/div[2]/div/div[3]/div/div/div/div/div[1]/button"}
   (Session info: headless chrome=93.0.4577.82)
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
 System info: host: '小平のMacBook', ip: 'fe80:0:0:0:1ccf:e04:5d03:62b0%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 93.0.4577.82, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: /var/folders/pl/wzmp230951v...}, goog:chromeOptions: {debuggerAddress: localhost:50816}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2680521bac0d7a39bdcb524dfc7ca2f4
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 93.0.4577.82, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: /var/folders/pl/wzmp230951v...}, goog:chromeOptions: {debuggerAddress: localhost:54534}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 2180178afd1036558db01e45b63f628d
 *** Element info: {Using=xpath, value=/html/body/div[1]/div[2]/div[2]/div/div[3]/div/div/div/div/div[1]/button}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -30,43 +30,15 @@ Session ID: 2680521bac0d7a39bdcb524dfc7ca2f4
 	at tools.Browser.click(Browser.java:168)
 	at cases.GasPrice.ModifyGasPrice(GasPrice.java:80)
 
-Invoice(cases.TurnOver)  Time elapsed: 10.376 sec  <<< FAILURE!
-java.lang.AssertionError: An exception occurred: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[3]/div/div/div[3]/button[2]"}
-  (Session info: headless chrome=93.0.4577.82)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
-System info: host: '小平のMacBook', ip: 'fe80:0:0:0:1ccf:e04:5d03:62b0%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '11'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 93.0.4577.82, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: /var/folders/pl/wzmp230951v...}, goog:chromeOptions: {debuggerAddress: localhost:50867}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 9c2764a5d6ed70b7d11fdc5cd265070f
-*** Element info: {Using=xpath, value=/html/body/div[3]/div/div/div[3]/button[2]}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at tools.Browser.locator(Browser.java:140)
-	at tools.Browser.click(Browser.java:168)
-	at cases.TurnOver.Invoice(TurnOver.java:56)
-
-ReductionCoupon(cases.MarketingReduction)  Time elapsed: 5.051 sec  <<< FAILURE!
+ReductionCoupon(cases.MarketingReduction)  Time elapsed: 4.415 sec  <<< FAILURE!
 java.lang.AssertionError: An exception occurred: stale element reference: element is not attached to the page document
   (Session info: headless chrome=93.0.4577.82)
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
 System info: host: '小平のMacBook', ip: 'fe80:0:0:0:1ccf:e04:5d03:62b0%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 93.0.4577.82, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: /var/folders/pl/wzmp230951v...}, goog:chromeOptions: {debuggerAddress: localhost:50895}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 1fa70cce78ae09ea1b15949567a8bacc
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 93.0.4577.82, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: /var/folders/pl/wzmp230951v...}, goog:chromeOptions: {debuggerAddress: localhost:54602}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 3b1b01afefb9b0ddc9dc688fa3af7fe6
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
