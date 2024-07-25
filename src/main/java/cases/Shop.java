@@ -8,19 +8,23 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import tools.Browser;
+import tools.MyScreenshot;
+
 import java.io.IOException;
 
 public class Shop {
 
     public static WebDriver driver;
     public static Browser browser;
+    private static MyScreenshot screenshotHelper;
 
     @BeforeClass
     public static void setUp() throws IOException{
         Shop.browser = new Browser();
         Shop.browser.InitConfigData();
-        driver = Shop.browser.getBrowser(); // 这一步才开始调用getBrowser()函数，并生成浏览器driver
-        Shop.browser.implicitlyWait(10);
+        driver = Login.browser.getBrowser(); // 这一步才开始调用getBrowser()函数，并生成浏览器driver
+        screenshotHelper = new MyScreenshot(driver);  // 实例化截图类,调用screenshot()函数进行截图
+        Login.browser.implicitlyWait(10);
     }
 
     @Test(description = "2-1:登录系统")

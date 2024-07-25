@@ -9,19 +9,23 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import tools.Browser;
+import tools.MyScreenshot;
+
 import java.io.IOException;
 
 public class GasGun {
 
     public static WebDriver driver;
     public static Browser browser;
+    private static MyScreenshot screenshotHelper;
 
     @BeforeClass
     public static void setUp() throws IOException{
         GasGun.browser = new Browser();
         GasGun.browser.InitConfigData();
-        driver = GasGun.browser.getBrowser(); // 这一步才开始调用getBrowser()函数，并生成浏览器driver
-        GasGun.browser.implicitlyWait(10);
+        driver = Login.browser.getBrowser(); // 这一步才开始调用getBrowser()函数，并生成浏览器driver
+        screenshotHelper = new MyScreenshot(driver);  // 实例化截图类,调用screenshot()函数进行截图
+        Login.browser.implicitlyWait(10);
     }
 
     @Test(description = "4-1:登录系统")
@@ -55,9 +59,10 @@ public class GasGun {
     }
 
     @Test(dependsOnMethods = {"AddGasGun"}, description = "4-4:禁用98#汽油油枪")
-    public void ForbidGasGun() {
-        GasGun.browser.explicitlyWait(By.xpath(GasGunElement.ninety_eight_gasoline), 20);
+    public void ForbidGasGun() throws InterruptedException {
+        Thread.sleep(2000);
         GasGun.browser.click(By.xpath(GasGunElement.ninety_eight_gasoline));
+        Thread.sleep(2000);
         GasGun.browser.click(By.xpath(GasGunElement.forbid_button));
         GasGun.browser.click(By.xpath(GasGunElement.submit_button));
         GasGun.browser.explicitlyWait(By.xpath(GasGunElement.forbid_text), 20);

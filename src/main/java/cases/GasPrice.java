@@ -9,9 +9,9 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import tools.Browser;
+import tools.MyScreenshot;
 import java.io.IOException;
 import java.util.Objects;
-
 import static elements.GasPriceElement.tell_zero_diesel;
 
 public class GasPrice {
@@ -19,13 +19,15 @@ public class GasPrice {
     public static WebDriver driver;
     public static Browser browser;
     public static GasPrice myObject;
+    private static MyScreenshot screenshotHelper;
 
     @BeforeClass
     public static void setUp() throws IOException{
         GasPrice.browser = new Browser();
         GasPrice.browser.InitConfigData();
-        driver = GasPrice.browser.getBrowser(); // 这一步才开始调用getBrowser()函数，并生成浏览器driver
-        GasPrice.browser.implicitlyWait(10);
+        driver = Login.browser.getBrowser(); // 这一步才开始调用getBrowser()函数，并生成浏览器driver
+        screenshotHelper = new MyScreenshot(driver);  // 实例化截图类,调用screenshot()函数进行截图
+        Login.browser.implicitlyWait(10);
         myObject = new GasPrice();
     }
 
@@ -74,9 +76,10 @@ public class GasPrice {
     }
 
     @Test(dependsOnMethods = {"AddZeroDieselPrice"}, description = "3-4:修改0#柴油国标价格")
-    public void ModifyGasPrice() {
+    public void ModifyGasPrice() throws InterruptedException, IOException {
         GasPrice.browser.explicitlyWait(By.xpath(GasPriceElement.zero_diesel), 20);
         GasPrice.browser.click(By.xpath(GasPriceElement.zero_diesel));
+        Thread.sleep(2000);
         GasPrice.browser.click(By.xpath(GasPriceElement.edit_button));
         GasPrice.browser.select_and_delete(By.xpath(GasPriceElement.country_price));
         GasPrice.browser.input(By.xpath(GasPriceElement.country_price), String.valueOf(GasPrice.browser.GenerateGasPrice()));

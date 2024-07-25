@@ -1,21 +1,44 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 23, Failures: 2, Errors: 0, Skipped: 4, Time elapsed: 61.829 sec <<< FAILURE! - in TestSuite
-TurnOverRecord(cases.TurnOver)  Time elapsed: 4.15 sec  <<< FAILURE!
-java.lang.AssertionError: null
-	at tools.Browser.Assert(Browser.java:245)
-	at cases.TurnOver.TurnOverRecord(TurnOver.java:49)
+Tests run: 23, Failures: 2, Errors: 0, Skipped: 3, Time elapsed: 85.644 sec <<< FAILURE! - in TestSuite
+ModifyGasPrice(cases.GasPrice)  Time elapsed: 10.717 sec  <<< FAILURE!
+java.lang.AssertionError: An exception occurred: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[1]/div[2]/div[2]/div/div[3]/div/div/div/div/div[1]/button"}
+  (Session info: headless chrome=93.0.4577.82)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
+System info: host: '小平のMacBook', ip: 'fe80:0:0:0:434:2754:2980:bd80%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 93.0.4577.82, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: /var/folders/pl/wzmp230951v...}, goog:chromeOptions: {debuggerAddress: localhost:54010}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 83860ec3a5ebeb093397f32c9ff0d412
+*** Element info: {Using=xpath, value=/html/body/div[1]/div[2]/div[2]/div/div[3]/div/div/div/div/div[1]/button}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at tools.Browser.locator(Browser.java:140)
+	at tools.Browser.click(Browser.java:168)
+	at cases.GasPrice.ModifyGasPrice(GasPrice.java:80)
 
-ReductionCoupon(cases.MarketingReduction)  Time elapsed: 4.478 sec  <<< FAILURE!
+ForbidGasGun(cases.GasGun)  Time elapsed: 0.116 sec  <<< FAILURE!
 java.lang.AssertionError: An exception occurred: stale element reference: element is not attached to the page document
   (Session info: headless chrome=93.0.4577.82)
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
 System info: host: '小平のMacBook', ip: 'fe80:0:0:0:434:2754:2980:bd80%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 93.0.4577.82, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: /var/folders/pl/wzmp230951v...}, goog:chromeOptions: {debuggerAddress: localhost:50396}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: bfbe82ff38326d2114f13894c91a012e
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 93.0.4577.82, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: /var/folders/pl/wzmp230951v...}, goog:chromeOptions: {debuggerAddress: localhost:54158}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 3b18b0f5e88c859d5aa3b0591c44e1f4
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -29,5 +52,5 @@ Session ID: bfbe82ff38326d2114f13894c91a012e
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
 	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
 	at tools.Browser.click(Browser.java:168)
-	at cases.MarketingReduction.ReductionCoupon(MarketingReduction.java:42)
+	at cases.GasGun.ForbidGasGun(GasGun.java:60)
 

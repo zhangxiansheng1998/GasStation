@@ -9,19 +9,21 @@ import org.testng.annotations.*;
 import tools.Browser;
 import java.io.IOException;
 import sqls.TurnOverSql;
-
+import tools.MyScreenshot;
 
 public class TurnOver {
 
     public static WebDriver driver;
     public static Browser browser;
+    private static MyScreenshot screenshotHelper;
 
     @BeforeClass
     public static void setUp() throws IOException{
         TurnOver.browser = new Browser();
         TurnOver.browser.InitConfigData();
-        driver = TurnOver.browser.getBrowser(); // 这一步才开始调用getBrowser()函数，并生成浏览器driver
-        TurnOver.browser.implicitlyWait(10);
+        driver = Login.browser.getBrowser(); // 这一步才开始调用getBrowser()函数，并生成浏览器driver
+        screenshotHelper = new MyScreenshot(driver);  // 实例化截图类,调用screenshot()函数进行截图
+        Login.browser.implicitlyWait(10);
     }
 
     @Test(description = "5-1:登录系统")

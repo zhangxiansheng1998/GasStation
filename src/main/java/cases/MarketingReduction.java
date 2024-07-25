@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
 import tools.Browser;
+import tools.MyScreenshot;
 import java.io.IOException;
 
 
@@ -15,13 +16,15 @@ public class MarketingReduction {
 
     public static WebDriver driver;
     public static Browser browser;
+    private static MyScreenshot screenshotHelper;
 
     @BeforeClass
     public static void setUp() throws IOException{
         MarketingReduction.browser = new Browser();
         MarketingReduction.browser.InitConfigData();
-        driver = MarketingReduction.browser.getBrowser(); // 这一步才开始调用getBrowser()函数，并生成浏览器driver
-        MarketingReduction.browser.implicitlyWait(10);
+        driver = Login.browser.getBrowser(); // 这一步才开始调用getBrowser()函数，并生成浏览器driver
+        screenshotHelper = new MyScreenshot(driver);  // 实例化截图类,调用screenshot()函数进行截图
+        Login.browser.implicitlyWait(10);
     }
 
     @Test(description = "6-1:登录系统")
@@ -39,6 +42,7 @@ public class MarketingReduction {
         MarketingReduction.browser.click(By.xpath(ShopElement.my_shop_button));
         MarketingReduction.browser.click(By.xpath(ShopElement.shop_logo));
         MarketingReduction.browser.click(By.xpath(MarketingReductionElement.marketing));
+        Thread.sleep(2000);
         MarketingReduction.browser.click(By.xpath(MarketingReductionElement.reduction_coupon));
         MarketingReduction.browser.explicitlyWait(By.xpath(MarketingReductionElement.reduction_coupon_text), 20);
         MarketingReduction.browser.Assert(By.xpath(MarketingReductionElement.reduction_coupon_text),"满减券");
