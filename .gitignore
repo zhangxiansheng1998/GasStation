@@ -11,6 +11,8 @@ target/
 *.iws
 *.iml
 *.ipr
+src/main/java/screenshots
+
 
 ### Eclipse ###
 .apt_generated
