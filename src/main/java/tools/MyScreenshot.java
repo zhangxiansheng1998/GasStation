@@ -39,7 +39,5 @@ public class MyScreenshot {
             System.err.println("WebDriver does not implement TakesScreenshot interface");
         }
     }
-
-    // 如果有需要，您可以添加更多的方法或功能
 }
 

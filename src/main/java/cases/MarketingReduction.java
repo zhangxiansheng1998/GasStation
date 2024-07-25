@@ -22,9 +22,9 @@ public class MarketingReduction {
     public static void setUp() throws IOException{
         MarketingReduction.browser = new Browser();
         MarketingReduction.browser.InitConfigData();
-        driver = Login.browser.getBrowser(); // 这一步才开始调用getBrowser()函数，并生成浏览器driver
+        driver = MarketingReduction.browser.getBrowser(); // 这一步才开始调用getBrowser()函数，并生成浏览器driver
         screenshotHelper = new MyScreenshot(driver);  // 实例化截图类,调用screenshot()函数进行截图
-        Login.browser.implicitlyWait(10);
+        MarketingReduction.browser.implicitlyWait(10);
     }
 
     @Test(description = "6-1:登录系统")

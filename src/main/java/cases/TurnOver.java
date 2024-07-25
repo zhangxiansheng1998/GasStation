@@ -21,9 +21,9 @@ public class TurnOver {
     public static void setUp() throws IOException{
         TurnOver.browser = new Browser();
         TurnOver.browser.InitConfigData();
-        driver = Login.browser.getBrowser(); // 这一步才开始调用getBrowser()函数，并生成浏览器driver
+        driver = TurnOver.browser.getBrowser(); // 这一步才开始调用getBrowser()函数，并生成浏览器driver
         screenshotHelper = new MyScreenshot(driver);  // 实例化截图类,调用screenshot()函数进行截图
-        Login.browser.implicitlyWait(10);
+        TurnOver.browser.implicitlyWait(10);
     }
 
     @Test(description = "5-1:登录系统")
@@ -52,9 +52,10 @@ public class TurnOver {
     }
 
     @Test(dependsOnMethods = {"TurnOverRecord"}, description = "5-4:开票")
-    public void Invoice() {
+    public void Invoice() throws InterruptedException {
         TurnOver.browser.explicitlyWait(By.xpath(TurnOverElement.Invoice), 20);
         TurnOver.browser.click(By.xpath(TurnOverElement.Invoice));
+        Thread.sleep(2000);
         TurnOver.browser.click(By.xpath(TurnOverElement.confirm_text));
         TurnOver.browser.explicitlyWait(By.xpath(TurnOverElement.Invoice_text), 20);
         TurnOver.browser.Assert(By.xpath(TurnOverElement.Invoice_text),"开票成功！");
