@@ -39,10 +39,10 @@ public class Browser {
 
         Properties p = new Properties();
         // 加载配置文件
-        InputStream ips = new FileInputStream("/Users/macbook_air/Desktop/Backup/Automation/GasStation/src/main/java/tools/Browser.properties");
+        InputStream ips = new FileInputStream("/Users/macbook_air/Desktop/Backup/Automation/GasStation/properties");
         p.load(ips);
 
-        logger.info("Start to read values from Browser.properties file");
+        logger.info("Start to read values from properties file");
 
         BrowserName=p.getProperty("BrowserName");
 

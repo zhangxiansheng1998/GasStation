@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="83.394" tests="23" errors="0" skipped="0" failures="0">
+<testsuite name="TestSuite" time="3.101" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="11+28"/>
@@ -25,16 +25,16 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="os.name" value="Mac OS X"/>
-    <property name="classworlds.conf" value="/Users/macbook_air/Desktop/apache-maven-3.9.7/bin/m2.conf"/>
+    <property name="classworlds.conf" value="/Users/macbook_air/Desktop/Maven/bin/m2.conf"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/Users/macbook_air/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
-    <property name="maven.conf" value="/Users/macbook_air/Desktop/apache-maven-3.9.7/conf"/>
+    <property name="maven.conf" value="/Users/macbook_air/Desktop/Maven/conf"/>
     <property name="jdk.debug" value="release"/>
     <property name="java.class.version" value="55.0"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="os.version" value="10.16"/>
-    <property name="library.jansi.path" value="/Users/macbook_air/Desktop/apache-maven-3.9.7/lib/jansi-native"/>
+    <property name="library.jansi.path" value="/Users/macbook_air/Desktop/Maven/lib/jansi-native"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="user.home" value="/Users/macbook_air"/>
     <property name="user.timezone" value="Asia/Shanghai"/>
@@ -42,7 +42,7 @@
     <property name="file.encoding" value="UTF-8"/>
     <property name="java.specification.version" value="11"/>
     <property name="user.name" value="macbook_air"/>
-    <property name="java.class.path" value="/Users/macbook_air/Desktop/apache-maven-3.9.7/boot/plexus-classworlds-2.8.0.jar"/>
+    <property name="java.class.path" value="/Users/macbook_air/Desktop/Maven/boot/plexus-classworlds-2.8.0.jar"/>
     <property name="java.vm.specification.version" value="11"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test"/>
@@ -53,7 +53,7 @@
     <property name="java.vm.info" value="mixed mode"/>
     <property name="java.version" value="11"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="/Users/macbook_air/Desktop/apache-maven-3.9.7"/>
+    <property name="maven.home" value="/Users/macbook_air/Desktop/Maven"/>
     <property name="file.separator" value="/"/>
     <property name="java.version.date" value="2018-09-25"/>
     <property name="java.vendor.url.bug" value="http://bugreport.java.com/bugreport/"/>
@@ -64,27 +64,5 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="Login" classname="cases.Login" time="3.282"/>
-  <testcase name="Login" classname="cases.Shop" time="1.104"/>
-  <testcase name="MyShop" classname="cases.Shop" time="4.433"/>
-  <testcase name="Login" classname="cases.GasPrice" time="1.351"/>
-  <testcase name="GasPriceEdit" classname="cases.GasPrice" time="4.745"/>
-  <testcase name="AddZeroDieselPrice" classname="cases.GasPrice" time="12.006"/>
-  <testcase name="ModifyGasPrice" classname="cases.GasPrice" time="4.358"/>
-  <testcase name="AddWeeklyActivity" classname="cases.GasPrice" time="1.486"/>
-  <testcase name="DeleteWeeklyActivity" classname="cases.GasPrice" time="3.66"/>
-  <testcase name="Login" classname="cases.GasGun" time="1.078"/>
-  <testcase name="GasGunEdit" classname="cases.GasGun" time="4.96"/>
-  <testcase name="AddGasGun" classname="cases.GasGun" time="1.898"/>
-  <testcase name="ForbidGasGun" classname="cases.GasGun" time="4.436"/>
-  <testcase name="DeleteGasGun" classname="cases.GasGun" time="3.484"/>
-  <testcase name="Login" classname="cases.TurnOver" time="1.084"/>
-  <testcase name="UpdateStatic" classname="cases.TurnOver" time="0.471"/>
-  <testcase name="TurnOverRecord" classname="cases.TurnOver" time="6.852"/>
-  <testcase name="Invoice" classname="cases.TurnOver" time="3.9"/>
-  <testcase name="Login" classname="cases.MarketingReduction" time="1.081"/>
-  <testcase name="ReductionCoupon" classname="cases.MarketingReduction" time="7.77"/>
-  <testcase name="AddReductionCoupon" classname="cases.MarketingReduction" time="1.825"/>
-  <testcase name="OfflineReductionCoupon" classname="cases.MarketingReduction" time="4.653"/>
-  <testcase name="DeleteReductionCoupon" classname="cases.MarketingReduction" time="3.477"/>
+  <testcase name="Login" classname="cases.Login" time="3.101"/>
 </testsuite>
