@@ -81,7 +81,6 @@ public class GasPrice {
         GasPrice.browser.explicitlyWait(By.xpath(GasPriceElement.zero_diesel), 20);
         GasPrice.browser.click(By.xpath(GasPriceElement.zero_diesel));
         Thread.sleep(2000);
-        screenshotHelper.screenshot();
         GasPrice.browser.click(By.xpath(GasPriceElement.edit_button));
         GasPrice.browser.select_and_delete(By.xpath(GasPriceElement.country_price));
         GasPrice.browser.input(By.xpath(GasPriceElement.country_price), String.valueOf(GasPrice.browser.GenerateGasPrice()));

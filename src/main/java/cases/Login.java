@@ -31,7 +31,6 @@ public class Login {
         Login.browser.input(By.xpath(LoginElement.code_input_box),"thinkr");
         Login.browser.explicitlyWait(By.xpath(LoginElement.login_button),20);
         Login.browser.click(By.xpath(LoginElement.login_button));
-        screenshotHelper.screenshot();
         System.out.println("登录成功!");
     }
 

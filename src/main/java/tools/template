@@ -7275,7 +7275,7 @@
                     {
                         name: '运行结果',
                         type: 'pie',
-                        radius: '55%',
+                        radius: '65%',
                         center: ['50%', '60%'],
                         data: [
                             {value: resultData["testFail"], name: '失败'},
