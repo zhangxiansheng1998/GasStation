@@ -35,18 +35,18 @@ public class GasPrice {
     public void Login() {
         GasPrice.browser.input(By.xpath(LoginElement.phone_input_box),"15180381485");
         GasPrice.browser.input(By.xpath(LoginElement.code_input_box),"thinkr");
-        GasPrice.browser.explicitlyWait(By.xpath(LoginElement.login_button),20);
+        GasPrice.browser.explicitlyWait(By.xpath(LoginElement.login_button),10);
         GasPrice.browser.click(By.xpath(LoginElement.login_button));
         System.out.println("登录成功!");
     }
 
     @Test(dependsOnMethods = {"Login"}, description = "3-2:进入油价配置页面")
     public void GasPriceEdit() {
-        GasPrice.browser.explicitlyWait(By.xpath(ShopElement.my_shop_button), 20);
+        GasPrice.browser.explicitlyWait(By.xpath(ShopElement.my_shop_button), 10);
         GasPrice.browser.click(By.xpath(ShopElement.my_shop_button));
         GasPrice.browser.click(By.xpath(ShopElement.shop_logo));
         GasPrice.browser.click(By.xpath(GasPriceElement.gas_price_edit));
-        GasPrice.browser.explicitlyWait(By.xpath(GasPriceElement.gas_price_edit_text), 20);
+        GasPrice.browser.explicitlyWait(By.xpath(GasPriceElement.gas_price_edit_text), 10);
         GasPrice.browser.Assert(By.xpath(GasPriceElement.gas_price_edit_text),"油价配置");
     }
 
@@ -55,7 +55,7 @@ public class GasPrice {
         String tell_zero_diesel_text = GasPrice.browser.tell_elemnt(By.xpath(tell_zero_diesel));
 
         if (Objects.equals(tell_zero_diesel_text, "元素存在")) {
-            GasPrice.browser.explicitlyWait(By.xpath(GasPriceElement.zero_diesel), 20);
+            GasPrice.browser.explicitlyWait(By.xpath(GasPriceElement.zero_diesel), 10);
             GasPrice.browser.click(By.xpath(GasPriceElement.zero_diesel));
             GasPrice.browser.click(By.xpath(GasPriceElement.edit_button));
             GasPrice.browser.click(By.xpath(GasPriceElement.delete_weekly_activity_vip));
@@ -78,7 +78,7 @@ public class GasPrice {
     @Test(dependsOnMethods = {"AddZeroDieselPrice"}, description = "3-4:修改0#柴油国标价格")
     public void ModifyGasPrice() throws InterruptedException, IOException {
         GasPrice.browser.refresh();
-        GasPrice.browser.explicitlyWait(By.xpath(GasPriceElement.zero_diesel), 20);
+        GasPrice.browser.explicitlyWait(By.xpath(GasPriceElement.zero_diesel), 10);
         GasPrice.browser.click(By.xpath(GasPriceElement.zero_diesel));
         Thread.sleep(2000);
         GasPrice.browser.click(By.xpath(GasPriceElement.edit_button));
@@ -90,7 +90,7 @@ public class GasPrice {
 
     @Test(dependsOnMethods = {"ModifyGasPrice"}, description = "3-5:新增0#柴油周活动")
     public void AddWeeklyActivity() {
-        GasPrice.browser.explicitlyWait(By.xpath(GasPriceElement.edit_button), 20);
+        GasPrice.browser.explicitlyWait(By.xpath(GasPriceElement.edit_button), 10);
         GasPrice.browser.click(By.xpath(GasPriceElement.edit_button));
         GasPrice.browser.click(By.xpath(GasPriceElement.add_weekly_activity_vip));
         GasPrice.browser.input(By.xpath(GasPriceElement.discount_price), "0.3");
@@ -101,7 +101,7 @@ public class GasPrice {
 
     @Test(dependsOnMethods = {"AddWeeklyActivity"}, description = "3-6:删除0#柴油周活动")
     public void DeleteWeeklyActivity() {
-        GasPrice.browser.explicitlyWait(By.xpath(GasPriceElement.edit_button), 20);
+        GasPrice.browser.explicitlyWait(By.xpath(GasPriceElement.edit_button), 10);
         GasPrice.browser.click(By.xpath(GasPriceElement.edit_button));
         GasPrice.browser.click(By.xpath(GasPriceElement.delete_weekly_activity_vip));
         GasPrice.browser.click(By.xpath(GasPriceElement.confirm_button));

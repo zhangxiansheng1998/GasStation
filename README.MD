@@ -32,7 +32,7 @@ A.忽略测试用例报错，继续执行后面的函数
         </configuration>
     </plugin>
 
-B.执行函数
+B.自定义执行函数
 
     <plugin>
         <groupId>org.codehaus.mojo</groupId>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="1.17" tests="1" errors="0" skipped="0" failures="0">
+<testsuite name="TestSuite" time="84.185" tests="23" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="11+28"/>
@@ -64,5 +64,27 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="Login" classname="cases.Login" time="1.17"/>
+  <testcase name="Login" classname="cases.Login" time="1.268"/>
+  <testcase name="Login" classname="cases.Shop" time="1.102"/>
+  <testcase name="MyShop" classname="cases.Shop" time="4.332"/>
+  <testcase name="Login" classname="cases.GasPrice" time="1.12"/>
+  <testcase name="GasPriceEdit" classname="cases.GasPrice" time="4.523"/>
+  <testcase name="AddZeroDieselPrice" classname="cases.GasPrice" time="12.263"/>
+  <testcase name="ModifyGasPrice" classname="cases.GasPrice" time="3.615"/>
+  <testcase name="AddWeeklyActivity" classname="cases.GasPrice" time="2.018"/>
+  <testcase name="DeleteWeeklyActivity" classname="cases.GasPrice" time="3.683"/>
+  <testcase name="Login" classname="cases.GasGun" time="1.126"/>
+  <testcase name="GasGunEdit" classname="cases.GasGun" time="5.397"/>
+  <testcase name="AddGasGun" classname="cases.GasGun" time="2.013"/>
+  <testcase name="ForbidGasGun" classname="cases.GasGun" time="4.54"/>
+  <testcase name="DeleteGasGun" classname="cases.GasGun" time="3.504"/>
+  <testcase name="Login" classname="cases.TurnOver" time="1.139"/>
+  <testcase name="UpdateStatic" classname="cases.TurnOver" time="0.487"/>
+  <testcase name="TurnOverRecord" classname="cases.TurnOver" time="7.737"/>
+  <testcase name="Invoice" classname="cases.TurnOver" time="3.913"/>
+  <testcase name="Login" classname="cases.MarketingReduction" time="1.183"/>
+  <testcase name="ReductionCoupon" classname="cases.MarketingReduction" time="8.928"/>
+  <testcase name="AddReductionCoupon" classname="cases.MarketingReduction" time="2.043"/>
+  <testcase name="OfflineReductionCoupon" classname="cases.MarketingReduction" time="4.728"/>
+  <testcase name="DeleteReductionCoupon" classname="cases.MarketingReduction" time="3.523"/>
 </testsuite>

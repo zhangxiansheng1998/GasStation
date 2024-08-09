@@ -31,7 +31,7 @@ public class Shop {
     public void Login() {
         Shop.browser.input(By.xpath(LoginElement.phone_input_box),"15180381485");
         Shop.browser.input(By.xpath(LoginElement.code_input_box),"thinkr");
-        Shop.browser.explicitlyWait(By.xpath(LoginElement.login_button),20);
+        Shop.browser.explicitlyWait(By.xpath(LoginElement.login_button),10);
         Shop.browser.click(By.xpath(LoginElement.login_button));
         System.out.println("登录成功!");
     }
@@ -39,7 +39,7 @@ public class Shop {
     @Test(dependsOnMethods = {"Login"}, description = "2-2:验证店铺名称")
     public void MyShop() {
         Shop.browser.click(By.xpath(ShopElement.my_shop_button));
-        Shop.browser.explicitlyWait(By.xpath(ShopElement.shop_name), 20);
+        Shop.browser.explicitlyWait(By.xpath(ShopElement.shop_name), 10);
         Shop.browser.Assert(By.xpath(ShopElement.shop_name),"新城加油站");
     }
 

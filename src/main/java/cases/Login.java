@@ -29,7 +29,7 @@ public class Login {
     public void Login() {
         Login.browser.input(By.xpath(LoginElement.phone_input_box),"15180381485");
         Login.browser.input(By.xpath(LoginElement.code_input_box),"thinkr");
-        Login.browser.explicitlyWait(By.xpath(LoginElement.login_button),20);
+        Login.browser.explicitlyWait(By.xpath(LoginElement.login_button),10);
         Login.browser.click(By.xpath(LoginElement.login_button));
         System.out.println("登录成功!");
     }

@@ -18,6 +18,11 @@
     <test name="AllCase">
         <classes>
             <class name="cases.Login" />
+            <class name="cases.Shop" />
+            <class name="cases.GasPrice" />
+            <class name="cases.GasGun" />
+            <class name="cases.TurnOver" />
+            <class name="cases.MarketingReduction" />
         </classes>
     </test>
 
