@@ -53,8 +53,8 @@ public class MarketingReduction {
         MarketingReduction.browser.explicitlyWait(By.xpath(MarketingReductionElement.add_reduction_coupon_button), 10);
         MarketingReduction.browser.click(By.xpath(MarketingReductionElement.add_reduction_coupon_button));
         MarketingReduction.browser.input(By.xpath(MarketingReductionElement.coupon_name), MarketingReduction.browser.GenerateGasGunName());
-        MarketingReduction.browser.input(By.xpath(MarketingReductionElement.reduction_amount), "200");
-        MarketingReduction.browser.input(By.xpath(MarketingReductionElement.discount_amount), "10");
+        MarketingReduction.browser.input(By.xpath(MarketingReductionElement.satisfied_amount), "200");
+        MarketingReduction.browser.input(By.xpath(MarketingReductionElement.reduction_amount), "10");
         MarketingReduction.browser.click(By.xpath(MarketingReductionElement.available_disesl));
         MarketingReduction.browser.input(By.xpath(MarketingReductionElement.valid_days), "7");
         MarketingReduction.browser.click(By.xpath(MarketingReductionElement.confirm_button));
