@@ -59,6 +59,7 @@ public class TurnOver {
         TurnOver.browser.click(By.xpath(TurnOverElement.confirm_text));
         TurnOver.browser.explicitlyWait(By.xpath(TurnOverElement.Invoice_text), 10);
         TurnOver.browser.Assert(By.xpath(TurnOverElement.Invoice_text),"开票成功！");
+        System.out.println("开票成功!");
     }
 
     @AfterClass

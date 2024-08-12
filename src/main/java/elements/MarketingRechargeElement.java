@@ -13,7 +13,7 @@ public class MarketingRechargeElement {
     public static final String recharge_discount_name = "/html/body/div[1]/div[2]/div[2]/div[2]/div/form/div[1]/div/div[1]/div/input";
     /* 新增油卡充值优惠页面-【满足金额】满足XX才能使用 */
     public static final String satisfied_amount = "/html/body/div[1]/div[2]/div[2]/div[2]/div/form/div[5]/div[1]/div/div/div[1]/input";
-    /* 新增油卡充值优惠页面-【返点赠送-指定金额】 赠送XX元 */
+    /* 新增油卡充值优惠页面-【返点赠送-指定金额】赠送XX元 */
     public static final String donate_fixed_amount = "/html/body/div[1]/div[2]/div[2]/div[2]/div/form/div[5]/div[2]/div[2]/div[1]/label[1]/span[2]/div/div[1]/input";
     /* 新增油卡充值优惠页面-【立即开始】按钮  */
     public static final String immediately_start_button = "/html/body/div[1]/div[2]/div[2]/div[2]/div/form/div[9]/div[1]/div/label/span[2]";

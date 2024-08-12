@@ -23,6 +23,9 @@
             <class name="cases.GasGun" />
             <class name="cases.TurnOver" />
             <class name="cases.MarketingReduction" />
+            <class name="cases.MarketingDiscount" />
+            <class name="cases.MarketingRecharge" />
+            <class name="cases.Device" />
         </classes>
     </test>
 

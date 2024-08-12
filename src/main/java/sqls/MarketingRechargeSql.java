@@ -25,7 +25,7 @@ public class MarketingRechargeSql {
             Statement stmt = conn.createStatement(); //创建Statement对象
             System.out.print("成功连接到数据库！" + "\n");
 
-            String sql = "update gas_card_reward set is_delete=1 where admin_id='64f52fe297d5372dd64d9d00' order by create_time DESC limit 1";    //要执行的SQL
+            String sql = "update gas_card_reward set is_delete=1 where admin_id='64f52fe297d5372dd64d9d00' and is_delete=0 order by create_time DESC limit 1";    //要执行的SQL
             stmt.executeUpdate(sql);//创建数据对象
             System.out.println("update sql successfully");
 

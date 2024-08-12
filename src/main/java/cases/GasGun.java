@@ -67,7 +67,7 @@ public class GasGun {
         GasGun.browser.click(By.xpath(GasGunElement.submit_button));
         GasGun.browser.explicitlyWait(By.xpath(GasGunElement.forbid_text), 10);
         GasGun.browser.Assert(By.xpath(GasGunElement.forbid_text),"禁用");
-        System.out.println("98#汽油油枪禁用成功!");
+        System.out.println("油枪禁用成功!");
     }
 
     @Test(dependsOnMethods = {"ForbidGasGun"}, description = "4-5:删除98#汽油油枪")
@@ -76,7 +76,7 @@ public class GasGun {
         GasGun.browser.click(By.xpath(GasGunElement.ninety_eight_gasoline));
         GasGun.browser.click(By.xpath(GasGunElement.delete_button));
         GasGun.browser.click(By.xpath(GasGunElement.confirm_button));
-        System.out.println("98#汽油油枪删除成功!");
+        System.out.println("油枪删除成功!");
     }
 
     @AfterClass

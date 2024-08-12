@@ -58,6 +58,7 @@ public class MarketingReduction {
         MarketingReduction.browser.click(By.xpath(MarketingReductionElement.available_disesl));
         MarketingReduction.browser.input(By.xpath(MarketingReductionElement.valid_days), "7");
         MarketingReduction.browser.click(By.xpath(MarketingReductionElement.confirm_button));
+        System.out.println("满减券新增成功!");
     }
 
     @Test(dependsOnMethods = {"AddReductionCoupon"}, description = "6-4:下线满减券")
@@ -67,6 +68,7 @@ public class MarketingReduction {
         MarketingReduction.browser.click(By.xpath(MarketingReductionElement.offline_confirm_button));
         MarketingReduction.browser.explicitlyWait(By.xpath(MarketingReductionElement.offline_text), 10);
         MarketingReduction.browser.Assert(By.xpath(MarketingReductionElement.offline_text),"优惠券下线成功");
+        System.out.println("满减券下线成功!");
     }
 
     @Test(dependsOnMethods = {"OfflineReductionCoupon"}, description = "6-5:删除满减券")
@@ -76,6 +78,7 @@ public class MarketingReduction {
         MarketingReduction.browser.click(By.xpath(MarketingReductionElement.offline_confirm_button));
         MarketingReduction.browser.explicitlyWait(By.xpath(MarketingReductionElement.offline_text), 10);
         MarketingReduction.browser.Assert(By.xpath(MarketingReductionElement.offline_text),"删除成功");
+        System.out.println("满减券删除成功!");
     }
 
     @AfterClass

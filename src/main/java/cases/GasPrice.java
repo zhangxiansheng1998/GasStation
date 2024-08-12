@@ -71,8 +71,8 @@ public class GasPrice {
         GasPrice.browser.input(By.xpath(GasPriceElement.normal_price), "7.4");
         GasPrice.browser.input(By.xpath(GasPriceElement.vip_price), "7.3");
         GasPrice.browser.click(By.xpath(GasPriceElement.submit_button));
-        System.out.println("0#柴油新增成功!");
         GasPrice.browser.refresh();
+        System.out.println("柴油新增成功!");
     }
 
     @Test(dependsOnMethods = {"AddZeroDieselPrice"}, description = "3-4:修改0#柴油国标价格")
@@ -85,7 +85,7 @@ public class GasPrice {
         GasPrice.browser.select_and_delete(By.xpath(GasPriceElement.country_price));
         GasPrice.browser.input(By.xpath(GasPriceElement.country_price), String.valueOf(GasPrice.browser.GenerateGasPrice()));
         GasPrice.browser.click(By.xpath(GasPriceElement.submit_button));
-        System.out.println("0#柴油国标价格修改成功!");
+        System.out.println("国标价格修改成功!");
     }
 
     @Test(dependsOnMethods = {"ModifyGasPrice"}, description = "3-5:新增0#柴油周活动")
@@ -96,7 +96,7 @@ public class GasPrice {
         GasPrice.browser.input(By.xpath(GasPriceElement.discount_price), "0.3");
         GasPrice.browser.click(By.xpath(GasPriceElement.weekly_activity_day));
         GasPrice.browser.click(By.xpath(GasPriceElement.submit_button));
-        System.out.println("0#柴油周活动新增成功!");
+        System.out.println("周活动新增成功!");
     }
 
     @Test(dependsOnMethods = {"AddWeeklyActivity"}, description = "3-6:删除0#柴油周活动")
@@ -105,7 +105,7 @@ public class GasPrice {
         GasPrice.browser.click(By.xpath(GasPriceElement.edit_button));
         GasPrice.browser.click(By.xpath(GasPriceElement.delete_weekly_activity_vip));
         GasPrice.browser.click(By.xpath(GasPriceElement.confirm_button));
-        System.out.println("0#柴油周活动删除成功!");
+        System.out.println("周活动删除成功!");
     }
 
     @AfterClass
