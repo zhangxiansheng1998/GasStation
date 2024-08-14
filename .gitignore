@@ -12,7 +12,9 @@ target/
 *.iml
 *.ipr
 src/main/java/screenshots
-
+report-output
+src/main/resources
+test-output
 
 ### Eclipse ###
 .apt_generated
