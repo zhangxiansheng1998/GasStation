@@ -1,18 +1,22 @@
 package sqls;
 
+import tools.Browser;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.logging.Logger;
 
 public class MarketingRechargeSql {
+    public static final Logger logger = Logger.getLogger(Browser.class.getName());
     public static void main(String[] args) {
         try {
             //调用Class.forName()方法加载驱动程序
             Class.forName("com.mysql.jdbc.Driver");
-            System.out.println("成功加载MySQL驱动！");
+            logger.info("成功加载MySQL驱动！");
         } catch (ClassNotFoundException e1) {
-            System.out.println("找不到MySQL驱动!");
+            logger.info("找不到MySQL驱动!");
             e1.printStackTrace();
         }
 
@@ -27,12 +31,12 @@ public class MarketingRechargeSql {
 
             String sql = "update gas_card_reward set is_delete=1 where admin_id='64f52fe297d5372dd64d9d00' and is_delete=0 order by create_time DESC limit 1";    //要执行的SQL
             stmt.executeUpdate(sql);//创建数据对象
-            System.out.println("update sql successfully");
+            logger.info("update sql successfully");
 
             stmt.close();
             conn.close();
         } catch (SQLException e) {
-            System.out.println("数据库连接失败!");
+            logger.info("数据库连接失败!");
             e.printStackTrace();
         }
     }

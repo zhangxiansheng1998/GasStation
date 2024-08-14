@@ -26,6 +26,7 @@
             <class name="cases.MarketingDiscount" />
             <class name="cases.MarketingRecharge" />
             <class name="cases.Device" />
+            <class name="tools.DeleteExtraLogs" />
         </classes>
     </test>
 

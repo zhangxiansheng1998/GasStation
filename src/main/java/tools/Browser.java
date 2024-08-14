@@ -6,6 +6,8 @@ import java.io.InputStream;
 import java.util.List;
 import java.util.Objects;
 import java.util.Properties;
+import java.util.logging.FileHandler;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -24,6 +26,8 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoField;
+import java.util.logging.SimpleFormatter;
+
 import org.testng.Assert;
 
 public class Browser {
@@ -33,7 +37,18 @@ public class Browser {
     public String Headless;
     public static WebDriver driver;
 
-    private static final Logger logger = Logger.getLogger(Browser.class.getName());
+    public static final Logger logger = Logger.getLogger(Browser.class.getName());
+
+    public Browser() throws IOException {
+        try {
+            FileHandler fileHandler = new FileHandler("./log/my.log", false);
+            SimpleFormatter formatter = new SimpleFormatter();
+            fileHandler.setFormatter(formatter);
+            logger.addHandler(fileHandler);
+        } catch (IOException e) {
+            logger.log(Level.ALL, "Failed to setup logger", e);
+        }
+    }
 
     public void InitConfigData() throws IOException{
 
@@ -243,7 +258,8 @@ public class Browser {
     public void Assert(By locator, String txt) {
         try{
             assert Objects.equals(driver.findElement(locator).getText(), txt);
-            System.out.println("Assert element【"+ locator +"】" + "与文本" + "【" + txt + "】相同，断言成功！" );
+            logger.info("Assert element【"+ locator +"】" + "与文本" + "【" + txt + "】相同，断言成功！" );
+
         } catch (Exception e) {
             HandleException(e);
             Assert.fail("An exception occurred: " + e.getMessage(), e);

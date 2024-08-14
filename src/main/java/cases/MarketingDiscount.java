@@ -11,11 +11,13 @@ import tools.Browser;
 import tools.MyScreenshot;
 
 import java.io.IOException;
+import java.util.logging.Logger;
 
 public class MarketingDiscount {
     public static WebDriver driver;
     public static Browser browser;
     private static MyScreenshot screenshotHelper;
+    public static final Logger logger = Logger.getLogger(Browser.class.getName());
 
     @BeforeClass
     public static void setUp() throws IOException {
@@ -32,7 +34,7 @@ public class MarketingDiscount {
         MarketingDiscount.browser.input(By.xpath(LoginElement.code_input_box),"thinkr");
         MarketingDiscount.browser.explicitlyWait(By.xpath(LoginElement.login_button),10);
         MarketingDiscount.browser.click(By.xpath(LoginElement.login_button));
-        System.out.println("登录成功!");
+        logger.info("登录成功!");
     }
 
     @Test(dependsOnMethods = {"Login"}, description = "7-2:进入折扣券页面")
@@ -57,7 +59,7 @@ public class MarketingDiscount {
         MarketingDiscount.browser.click(By.xpath(MarketingDiscountElement.available_disesl));
         MarketingDiscount.browser.input(By.xpath(MarketingDiscountElement.valid_days), "14");
         MarketingDiscount.browser.click(By.xpath(MarketingDiscountElement.confirm_button));
-        System.out.println("折扣券新增成功!");
+        logger.info("折扣券新增成功!");
     }
 
     @Test(dependsOnMethods = {"AddDiscountCoupon"}, description = "7-4:下线折扣券")
@@ -67,7 +69,7 @@ public class MarketingDiscount {
         MarketingDiscount.browser.click(By.xpath(MarketingDiscountElement.offline_confirm_button));
         MarketingDiscount.browser.explicitlyWait(By.xpath(MarketingDiscountElement.offline_text), 10);
         MarketingDiscount.browser.Assert(By.xpath(MarketingDiscountElement.offline_text),"优惠券下线成功");
-        System.out.println("折扣券下线成功!");
+        logger.info("折扣券下线成功!");
     }
 
     @Test(dependsOnMethods = {"OfflineDiscountCoupon"}, description = "7-5:删除折扣券")
@@ -77,7 +79,7 @@ public class MarketingDiscount {
         MarketingDiscount.browser.click(By.xpath(MarketingDiscountElement.offline_confirm_button));
         MarketingDiscount.browser.explicitlyWait(By.xpath(MarketingDiscountElement.offline_text), 10);
         MarketingDiscount.browser.Assert(By.xpath(MarketingDiscountElement.offline_text),"删除成功");
-        System.out.println("折扣券删除成功!");
+        logger.info("折扣券删除成功!");
     }
 
     @AfterClass

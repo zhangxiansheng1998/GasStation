@@ -9,12 +9,14 @@ import org.testng.annotations.Test;
 import tools.Browser;
 import tools.MyScreenshot;
 import java.io.IOException;
+import java.util.logging.Logger;
 
 public class Login {
 
     public static WebDriver driver;
     public static Browser browser;
     private static MyScreenshot screenshotHelper;
+    public static final Logger logger = Logger.getLogger(Browser.class.getName());
 
     @BeforeClass
     public static void setUp() throws IOException{
@@ -31,7 +33,7 @@ public class Login {
         Login.browser.input(By.xpath(LoginElement.code_input_box),"thinkr");
         Login.browser.explicitlyWait(By.xpath(LoginElement.login_button),10);
         Login.browser.click(By.xpath(LoginElement.login_button));
-        System.out.println("登录成功!");
+        logger.info("登录成功!");
     }
 
     @AfterClass

@@ -10,11 +10,13 @@ import org.testng.annotations.Test;
 import tools.Browser;
 import tools.MyScreenshot;
 import java.io.IOException;
+import java.util.logging.Logger;
 
 public class Device {
     public static WebDriver driver;
     public static Browser browser;
     private static MyScreenshot screenshotHelper;
+    public static final Logger logger = Logger.getLogger(Browser.class.getName());
 
     @BeforeClass
     public static void setUp() throws IOException {
@@ -31,7 +33,7 @@ public class Device {
         Device.browser.input(By.xpath(LoginElement.code_input_box),"thinkr");
         Device.browser.explicitlyWait(By.xpath(LoginElement.login_button),10);
         Device.browser.click(By.xpath(LoginElement.login_button));
-        System.out.println("登录成功!");
+        logger.info("登录成功!");
     }
 
     @Test(dependsOnMethods = {"Login"}, description = "9-2:进入设备管理页面")
@@ -51,7 +53,7 @@ public class Device {
         Device.browser.input(By.xpath(DeviceElement.device_name), Device.browser.GenerateGasGunName());
         Device.browser.input(By.xpath(DeviceElement.device_number), Device.browser.GenerateGasGunName());
         Device.browser.click(By.xpath(DeviceElement.submit_button));
-        System.out.println("设备新增成功!");
+        logger.info("设备新增成功!");
     }
 
     @Test(dependsOnMethods = {"AddDevice"}, description = "9-4:修改设备")
@@ -61,7 +63,7 @@ public class Device {
         Device.browser.click(By.xpath(DeviceElement.printer_print_button));
         Device.browser.click(By.xpath(DeviceElement.submit_button));
         Device.browser.Assert(By.xpath(DeviceElement.modify_device_text),"操作成功！");
-        System.out.println("设备修改成功!");
+        logger.info("设备修改成功!");
     }
 
     @Test(dependsOnMethods = {"ModifyDevice"}, description = "9-5:删除设备")
@@ -70,7 +72,7 @@ public class Device {
         Device.browser.click(By.xpath(DeviceElement.delete_button));
         Device.browser.click(By.xpath(DeviceElement.delete_confirm_button));
         Device.browser.Assert(By.xpath(DeviceElement.modify_device_text),"删除成功");
-        System.out.println("设备删除成功!");
+        logger.info("设备删除成功!");
     }
 
     @AfterClass

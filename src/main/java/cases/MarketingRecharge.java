@@ -12,11 +12,13 @@ import tools.Browser;
 import tools.MyScreenshot;
 
 import java.io.IOException;
+import java.util.logging.Logger;
 
 public class MarketingRecharge {
     public static WebDriver driver;
     public static Browser browser;
     private static MyScreenshot screenshotHelper;
+    public static final Logger logger = Logger.getLogger(Browser.class.getName());
 
     @BeforeClass
     public static void setUp() throws IOException {
@@ -33,7 +35,7 @@ public class MarketingRecharge {
         MarketingRecharge.browser.input(By.xpath(LoginElement.code_input_box),"thinkr");
         MarketingRecharge.browser.explicitlyWait(By.xpath(LoginElement.login_button),10);
         MarketingRecharge.browser.click(By.xpath(LoginElement.login_button));
-        System.out.println("登录成功!");
+        logger.info("登录成功!");
     }
 
     @Test(dependsOnMethods = {"Login"}, description = "8-2:进入油卡充值优惠页面")
@@ -57,7 +59,7 @@ public class MarketingRecharge {
         MarketingRecharge.browser.input(By.xpath(MarketingRechargeElement.donate_fixed_amount), "5");
         MarketingRecharge.browser.click(By.xpath(MarketingRechargeElement.immediately_start_button));
         MarketingRecharge.browser.click(By.xpath(MarketingRechargeElement.confirm_button));
-        System.out.println("油卡充值优惠新增成功!");
+        logger.info("油卡充值优惠新增成功!");
     }
 
     @Test(dependsOnMethods = {"AddRechargeDiscount"}, description = "8-4:下线油卡充值优惠")
@@ -67,7 +69,7 @@ public class MarketingRecharge {
         MarketingRecharge.browser.click(By.xpath(MarketingRechargeElement.offline_confirm_button));
         MarketingRecharge.browser.explicitlyWait(By.xpath(MarketingRechargeElement.offline_text), 10);
         MarketingRecharge.browser.Assert(By.xpath(MarketingRechargeElement.offline_text),"操作成功");
-        System.out.println("油卡充值优惠下线成功!");
+        logger.info("油卡充值优惠下线成功!");
     }
 
     @Test(dependsOnMethods = {"OfflineRechargeDiscount"}, description = "8-5:通过sql语句删除充值优惠")

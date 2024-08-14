@@ -83,7 +83,7 @@ public class SendEmailWithHtmlAttachment {
         String subject = "加油站-Web自动化测试报告";
         // report报告路径
         String htmlFilePath = "/Users/macbook_air/Desktop/Backup/Automation/GasStation/report.html";
-        //email_template邮件模板路径
+        //email_template邮件模板的路径
         String emailFilePath = "/Users/macbook_air/Desktop/Backup/Automation/GasStation/src/main/java/tools/email_template.html";
         String htmlContent = readFileToString(emailFilePath);
         sendEmailWithHtmlAttachment(recipientEmail, subject, htmlContent, htmlFilePath);

@@ -12,6 +12,8 @@ import tools.Browser;
 import tools.MyScreenshot;
 import java.io.IOException;
 import java.util.Objects;
+import java.util.logging.Logger;
+
 import static elements.GasPriceElement.tell_zero_diesel;
 
 public class GasPrice {
@@ -20,6 +22,7 @@ public class GasPrice {
     public static Browser browser;
     public static GasPrice myObject;
     private static MyScreenshot screenshotHelper;
+    public static final Logger logger = Logger.getLogger(Browser.class.getName());
 
     @BeforeClass
     public static void setUp() throws IOException{
@@ -37,7 +40,7 @@ public class GasPrice {
         GasPrice.browser.input(By.xpath(LoginElement.code_input_box),"thinkr");
         GasPrice.browser.explicitlyWait(By.xpath(LoginElement.login_button),10);
         GasPrice.browser.click(By.xpath(LoginElement.login_button));
-        System.out.println("登录成功!");
+        logger.info("登录成功!");
     }
 
     @Test(dependsOnMethods = {"Login"}, description = "3-2:进入油价配置页面")
@@ -60,9 +63,9 @@ public class GasPrice {
             GasPrice.browser.click(By.xpath(GasPriceElement.edit_button));
             GasPrice.browser.click(By.xpath(GasPriceElement.delete_weekly_activity_vip));
             GasPrice.browser.click(By.xpath(GasPriceElement.confirm_button));
-            System.out.println("0#柴油已存在，正在删除");
+            logger.info("0#柴油已存在，正在删除");
         } else {
-            System.out.println("0#柴油不存在");
+            logger.info("0#柴油不存在");
         }
 
         GasPrice.browser.click(By.xpath(GasPriceElement.add_disesl_price));
@@ -72,7 +75,7 @@ public class GasPrice {
         GasPrice.browser.input(By.xpath(GasPriceElement.vip_price), "7.3");
         GasPrice.browser.click(By.xpath(GasPriceElement.submit_button));
         GasPrice.browser.refresh();
-        System.out.println("柴油新增成功!");
+        logger.info("柴油新增成功!");
     }
 
     @Test(dependsOnMethods = {"AddZeroDieselPrice"}, description = "3-4:修改0#柴油国标价格")
@@ -85,7 +88,7 @@ public class GasPrice {
         GasPrice.browser.select_and_delete(By.xpath(GasPriceElement.country_price));
         GasPrice.browser.input(By.xpath(GasPriceElement.country_price), String.valueOf(GasPrice.browser.GenerateGasPrice()));
         GasPrice.browser.click(By.xpath(GasPriceElement.submit_button));
-        System.out.println("国标价格修改成功!");
+        logger.info("国标价格修改成功!");
     }
 
     @Test(dependsOnMethods = {"ModifyGasPrice"}, description = "3-5:新增0#柴油周活动")
@@ -96,7 +99,7 @@ public class GasPrice {
         GasPrice.browser.input(By.xpath(GasPriceElement.discount_price), "0.3");
         GasPrice.browser.click(By.xpath(GasPriceElement.weekly_activity_day));
         GasPrice.browser.click(By.xpath(GasPriceElement.submit_button));
-        System.out.println("周活动新增成功!");
+        logger.info("周活动新增成功!");
     }
 
     @Test(dependsOnMethods = {"AddWeeklyActivity"}, description = "3-6:删除0#柴油周活动")
@@ -105,7 +108,7 @@ public class GasPrice {
         GasPrice.browser.click(By.xpath(GasPriceElement.edit_button));
         GasPrice.browser.click(By.xpath(GasPriceElement.delete_weekly_activity_vip));
         GasPrice.browser.click(By.xpath(GasPriceElement.confirm_button));
-        System.out.println("周活动删除成功!");
+        logger.info("周活动删除成功!");
     }
 
     @AfterClass

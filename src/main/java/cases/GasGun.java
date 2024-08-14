@@ -12,12 +12,14 @@ import tools.Browser;
 import tools.MyScreenshot;
 
 import java.io.IOException;
+import java.util.logging.Logger;
 
 public class GasGun {
 
     public static WebDriver driver;
     public static Browser browser;
     private static MyScreenshot screenshotHelper;
+    public static final Logger logger = Logger.getLogger(Browser.class.getName());
 
     @BeforeClass
     public static void setUp() throws IOException{
@@ -34,7 +36,7 @@ public class GasGun {
         GasGun.browser.input(By.xpath(LoginElement.code_input_box),"thinkr");
         GasGun.browser.explicitlyWait(By.xpath(LoginElement.login_button),10);
         GasGun.browser.click(By.xpath(LoginElement.login_button));
-        System.out.println("登录成功!");
+        logger.info("登录成功!");
     }
 
     @Test(dependsOnMethods = {"Login"}, description = "4-2:进入油枪配置页面")
@@ -55,7 +57,7 @@ public class GasGun {
         GasGun.browser.ClickDropdown("el-scrollbar__view el-select-dropdown__list","98#");
         GasGun.browser.input(By.xpath(GasGunElement.gas_gun_name_input), GasGun.browser.GenerateGasGunName());
         GasGun.browser.click(By.xpath(GasGunElement.submit_button));
-        System.out.println("油枪新增成功!");
+        logger.info("油枪新增成功!");
     }
 
     @Test(dependsOnMethods = {"AddGasGun"}, description = "4-4:禁用98#汽油油枪")
@@ -67,7 +69,7 @@ public class GasGun {
         GasGun.browser.click(By.xpath(GasGunElement.submit_button));
         GasGun.browser.explicitlyWait(By.xpath(GasGunElement.forbid_text), 10);
         GasGun.browser.Assert(By.xpath(GasGunElement.forbid_text),"禁用");
-        System.out.println("油枪禁用成功!");
+        logger.info("油枪禁用成功!");
     }
 
     @Test(dependsOnMethods = {"ForbidGasGun"}, description = "4-5:删除98#汽油油枪")
@@ -76,7 +78,7 @@ public class GasGun {
         GasGun.browser.click(By.xpath(GasGunElement.ninety_eight_gasoline));
         GasGun.browser.click(By.xpath(GasGunElement.delete_button));
         GasGun.browser.click(By.xpath(GasGunElement.confirm_button));
-        System.out.println("油枪删除成功!");
+        logger.info("油枪删除成功!");
     }
 
     @AfterClass

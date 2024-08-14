@@ -8,6 +8,8 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
 import tools.Browser;
 import java.io.IOException;
+import java.util.logging.Logger;
+
 import sqls.TurnOverSql;
 import tools.MyScreenshot;
 
@@ -16,6 +18,7 @@ public class TurnOver {
     public static WebDriver driver;
     public static Browser browser;
     private static MyScreenshot screenshotHelper;
+    public static final Logger logger = Logger.getLogger(Browser.class.getName());
 
     @BeforeClass
     public static void setUp() throws IOException{
@@ -32,7 +35,7 @@ public class TurnOver {
         TurnOver.browser.input(By.xpath(LoginElement.code_input_box),"thinkr");
         TurnOver.browser.explicitlyWait(By.xpath(LoginElement.login_button),10);
         TurnOver.browser.click(By.xpath(LoginElement.login_button));
-        System.out.println("登录成功!");
+        logger.info("登录成功!");
     }
 
     @Test(dependsOnMethods = {"Login"}, description = "5-2:通过sql语句修改开票状态和开票员")
@@ -59,7 +62,7 @@ public class TurnOver {
         TurnOver.browser.click(By.xpath(TurnOverElement.confirm_text));
         TurnOver.browser.explicitlyWait(By.xpath(TurnOverElement.Invoice_text), 10);
         TurnOver.browser.Assert(By.xpath(TurnOverElement.Invoice_text),"开票成功！");
-        System.out.println("开票成功!");
+        logger.info("开票成功!");
     }
 
     @AfterClass
