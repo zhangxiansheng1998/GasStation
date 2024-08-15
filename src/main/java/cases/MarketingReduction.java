@@ -1,6 +1,5 @@
 package cases;
 
-import elements.GasGunElement;
 import elements.LoginElement;
 import elements.ShopElement;
 import elements.MarketingReductionElement;
@@ -11,7 +10,6 @@ import tools.Browser;
 import tools.MyScreenshot;
 import java.io.IOException;
 import java.util.logging.Logger;
-
 
 public class MarketingReduction {
 

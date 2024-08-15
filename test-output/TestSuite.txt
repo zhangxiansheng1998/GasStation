@@ -1,4 +1,32 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 43.726 sec - in TestSuite
+Tests run: 39, Failures: 2, Errors: 0, Skipped: 4, Time elapsed: 143.038 sec <<< FAILURE! - in TestSuite
+ForbidGasGun(cases.GasGun)  Time elapsed: 3.172 sec  <<< FAILURE!
+java.lang.AssertionError: An exception occurred: element click intercepted: Element <div data-v-c46f346a="" class="number-item" style="background: linear-gradient(45deg, rgb(128, 140, 248), rgb(193, 176, 247)); color: rgb(255, 255, 255);">...</div> is not clickable at point (325, 275). Other element would receive the click: <div role="dialog" aria-modal="true" aria-label="新增油枪信息" aria-describedby="el-id-9993-10" class="el-overlay-dialog">...</div>
+  (Session info: headless chrome=93.0.4577.82)
+Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
+System info: host: '小平のMacBook', ip: 'fe80:0:0:0:d2:2319:50b1:4426%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 93.0.4577.82, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: /var/folders/pl/wzmp230951v...}, goog:chromeOptions: {debuggerAddress: localhost:56001}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d035583af2d349eaf4e4c42364b86bc6
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at tools.Browser.click(Browser.java:183)
+	at cases.GasGun.ForbidGasGun(GasGun.java:66)
+
+ReductionCoupon(cases.MarketingReduction)  Time elapsed: 7.022 sec  <<< FAILURE!
+java.lang.AssertionError: null
+	at tools.Browser.Assert(Browser.java:260)
+	at cases.MarketingReduction.ReductionCoupon(MarketingReduction.java:50)
+

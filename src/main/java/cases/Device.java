@@ -4,15 +4,14 @@ import elements.*;
 import elements.DeviceElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import tools.Browser;
 import tools.MyScreenshot;
 import java.io.IOException;
 import java.util.logging.Logger;
 
 public class Device {
+
     public static WebDriver driver;
     public static Browser browser;
     private static MyScreenshot screenshotHelper;

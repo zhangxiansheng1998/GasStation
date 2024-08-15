@@ -273,9 +273,9 @@ public class Browser {
         StackTraceElement[] stackTraceElements = Thread.currentThread().getStackTrace();
         if (stackTraceElements.length > 2) {
             String callingFunctionName = stackTraceElements[2].getMethodName();
-            System.err.println("【" + callingFunctionName + "】函数发生异常：" + e.getMessage());
+            logger.severe("【" + callingFunctionName + "】函数发生异常：" + e.getMessage());
         } else {
-            System.err.println("函数发生异常：" + e.getMessage());
+            logger.severe("函数发生异常：" + e.getMessage());
         }
         e.printStackTrace();
     }

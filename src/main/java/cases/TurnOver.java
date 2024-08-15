@@ -9,7 +9,6 @@ import org.testng.annotations.*;
 import tools.Browser;
 import java.io.IOException;
 import java.util.logging.Logger;
-
 import sqls.TurnOverSql;
 import tools.MyScreenshot;
 

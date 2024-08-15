@@ -1,276 +1,40 @@
-8月 14, 2024 4:08:37 下午 tools.Browser InitConfigData
+8月 15, 2024 2:32:55 下午 tools.Browser InitConfigData
 信息: Start to read values from properties file
-8月 14, 2024 4:08:39 下午 tools.Browser getBrowser
+8月 15, 2024 2:32:57 下午 tools.Browser getBrowser
 信息: Launching Headless Chrome ...
-8月 14, 2024 4:08:40 下午 tools.Browser getBrowser
+8月 15, 2024 2:32:58 下午 tools.Browser getBrowser
 信息: Open Domain: https://pay.huijinwei.com/oilAdmin/#/login
-8月 14, 2024 4:08:40 下午 tools.Browser getBrowser
+8月 15, 2024 2:32:58 下午 tools.Browser getBrowser
 信息: Maximize browser...
-8月 14, 2024 4:08:40 下午 tools.Browser implicitlyWait
+8月 15, 2024 2:32:58 下午 tools.Browser implicitlyWait
 信息: implicitlyWait for 10 seconds.
-8月 14, 2024 4:08:41 下午 tools.Browser explicitlyWait
+8月 15, 2024 2:32:59 下午 tools.Browser explicitlyWait
 信息: explicitlyWait element【By.xpath: /html/body/div/div/div/div[2]/form/button】for 10 seconds.
-8月 14, 2024 4:08:42 下午 cases.Login Login
+8月 15, 2024 2:32:59 下午 cases.MarketingReduction Login
 信息: 登录成功!
-8月 14, 2024 4:08:42 下午 tools.Browser InitConfigData
-信息: Start to read values from properties file
-8月 14, 2024 4:08:42 下午 tools.Browser getBrowser
-信息: Launching Headless Chrome ...
-8月 14, 2024 4:08:44 下午 tools.Browser getBrowser
-信息: Open Domain: https://pay.huijinwei.com/oilAdmin/#/login
-8月 14, 2024 4:08:44 下午 tools.Browser getBrowser
-信息: Maximize browser...
-8月 14, 2024 4:08:44 下午 tools.Browser implicitlyWait
-信息: implicitlyWait for 10 seconds.
-8月 14, 2024 4:08:44 下午 tools.Browser explicitlyWait
-信息: explicitlyWait element【By.xpath: /html/body/div/div/div/div[2]/form/button】for 10 seconds.
-8月 14, 2024 4:08:45 下午 cases.Shop Login
-信息: 登录成功!
-8月 14, 2024 4:08:50 下午 tools.Browser explicitlyWait
-信息: explicitlyWait element【By.xpath: /html/body/div[1]/div[2]/div[2]/div/div[3]/div/div/div/div/div[2]/div[1]】for 10 seconds.
-8月 14, 2024 4:08:50 下午 tools.Browser Assert
-信息: Assert element【By.xpath: /html/body/div[1]/div[2]/div[2]/div/div[3]/div/div/div/div/div[2]/div[1]】与文本【新城加油站】相同，断言成功！
-8月 14, 2024 4:08:50 下午 tools.Browser InitConfigData
-信息: Start to read values from properties file
-8月 14, 2024 4:08:51 下午 tools.Browser getBrowser
-信息: Launching Headless Chrome ...
-8月 14, 2024 4:08:52 下午 tools.Browser getBrowser
-信息: Open Domain: https://pay.huijinwei.com/oilAdmin/#/login
-8月 14, 2024 4:08:52 下午 tools.Browser getBrowser
-信息: Maximize browser...
-8月 14, 2024 4:08:52 下午 tools.Browser implicitlyWait
-信息: implicitlyWait for 10 seconds.
-8月 14, 2024 4:08:53 下午 tools.Browser explicitlyWait
-信息: explicitlyWait element【By.xpath: /html/body/div/div/div/div[2]/form/button】for 10 seconds.
-8月 14, 2024 4:08:54 下午 cases.GasPrice Login
-信息: 登录成功!
-8月 14, 2024 4:08:56 下午 tools.Browser explicitlyWait
+8月 15, 2024 2:33:01 下午 tools.Browser explicitlyWait
 信息: explicitlyWait element【By.xpath: /html/body/div[1]/div[2]/div[1]/ul/ul/li[2]】for 10 seconds.
-8月 14, 2024 4:08:59 下午 tools.Browser explicitlyWait
-信息: explicitlyWait element【By.xpath: /html/body/div[1]/div[2]/div[2]/div/div[1]/div[2]】for 10 seconds.
-8月 14, 2024 4:08:59 下午 tools.Browser Assert
-信息: Assert element【By.xpath: /html/body/div[1]/div[2]/div[2]/div/div[1]/div[2]】与文本【油价配置】相同，断言成功！
-8月 14, 2024 4:09:09 下午 cases.GasPrice AddZeroDieselPrice
-信息: 0#柴油不存在
-8月 14, 2024 4:09:12 下午 cases.GasPrice AddZeroDieselPrice
-信息: 柴油新增成功!
-8月 14, 2024 4:09:13 下午 tools.Browser explicitlyWait
-信息: explicitlyWait element【By.xpath: /html/body/div[1]/div[2]/div[2]/div/div[2]/div[2]/div[2]/div/div[1]】for 10 seconds.
-8月 14, 2024 4:09:16 下午 cases.GasPrice ModifyGasPrice
-信息: 国标价格修改成功!
-8月 14, 2024 4:09:17 下午 tools.Browser explicitlyWait
-信息: explicitlyWait element【By.xpath: /html/body/div[1]/div[2]/div[2]/div/div[3]/div/div/div/div/div[1]/button】for 10 seconds.
-8月 14, 2024 4:09:18 下午 cases.GasPrice AddWeeklyActivity
-信息: 周活动新增成功!
-8月 14, 2024 4:09:19 下午 tools.Browser explicitlyWait
-信息: explicitlyWait element【By.xpath: /html/body/div[1]/div[2]/div[2]/div/div[3]/div/div/div/div/div[1]/button】for 10 seconds.
-8月 14, 2024 4:09:22 下午 cases.GasPrice DeleteWeeklyActivity
-信息: 周活动删除成功!
-8月 14, 2024 4:09:22 下午 tools.Browser InitConfigData
-信息: Start to read values from properties file
-8月 14, 2024 4:09:23 下午 tools.Browser getBrowser
-信息: Launching Headless Chrome ...
-8月 14, 2024 4:09:24 下午 tools.Browser getBrowser
-信息: Open Domain: https://pay.huijinwei.com/oilAdmin/#/login
-8月 14, 2024 4:09:24 下午 tools.Browser getBrowser
-信息: Maximize browser...
-8月 14, 2024 4:09:24 下午 tools.Browser implicitlyWait
-信息: implicitlyWait for 10 seconds.
-8月 14, 2024 4:09:25 下午 tools.Browser explicitlyWait
-信息: explicitlyWait element【By.xpath: /html/body/div/div/div/div[2]/form/button】for 10 seconds.
-8月 14, 2024 4:09:26 下午 cases.GasGun Login
-信息: 登录成功!
-8月 14, 2024 4:09:28 下午 tools.Browser explicitlyWait
-信息: explicitlyWait element【By.xpath: /html/body/div[1]/div[2]/div[1]/ul/ul/li[2]】for 10 seconds.
-8月 14, 2024 4:09:31 下午 tools.Browser explicitlyWait
+8月 15, 2024 2:33:08 下午 tools.Browser explicitlyWait
 信息: explicitlyWait element【By.xpath: /html/body/div[1]/div[2]/div[2]/div[1]/div[2]】for 10 seconds.
-8月 14, 2024 4:09:31 下午 tools.Browser Assert
-信息: Assert element【By.xpath: /html/body/div[1]/div[2]/div[2]/div[1]/div[2]】与文本【油枪配置】相同，断言成功！
-8月 14, 2024 4:09:31 下午 tools.Browser explicitlyWait
-信息: explicitlyWait element【By.xpath: /html/body/div[1]/div[2]/div[2]/div[1]/div[3]/button】for 10 seconds.
-8月 14, 2024 4:09:34 下午 cases.GasGun AddGasGun
-信息: 油枪新增成功!
-8月 14, 2024 4:09:38 下午 tools.Browser explicitlyWait
-信息: explicitlyWait element【By.xpath: /html/body/div[1]/div[2]/div[2]/div[2]/div[1]/div[2]/div[1]/div[3]】for 10 seconds.
-8月 14, 2024 4:09:38 下午 tools.Browser Assert
-信息: Assert element【By.xpath: /html/body/div[1]/div[2]/div[2]/div[2]/div[1]/div[2]/div[1]/div[3]】与文本【禁用】相同，断言成功！
-8月 14, 2024 4:09:38 下午 cases.GasGun ForbidGasGun
-信息: 油枪禁用成功!
-8月 14, 2024 4:09:38 下午 tools.Browser explicitlyWait
-信息: explicitlyWait element【By.xpath: /html/body/div[1]/div[2]/div[2]/div[2]/div[1]/div[2]/div[1]】for 10 seconds.
-8月 14, 2024 4:09:42 下午 cases.GasGun DeleteGasGun
-信息: 油枪删除成功!
-8月 14, 2024 4:09:42 下午 tools.Browser InitConfigData
-信息: Start to read values from properties file
-8月 14, 2024 4:09:43 下午 tools.Browser getBrowser
-信息: Launching Headless Chrome ...
-8月 14, 2024 4:09:44 下午 tools.Browser getBrowser
-信息: Open Domain: https://pay.huijinwei.com/oilAdmin/#/login
-8月 14, 2024 4:09:44 下午 tools.Browser getBrowser
-信息: Maximize browser...
-8月 14, 2024 4:09:44 下午 tools.Browser implicitlyWait
-信息: implicitlyWait for 10 seconds.
-8月 14, 2024 4:09:45 下午 tools.Browser explicitlyWait
-信息: explicitlyWait element【By.xpath: /html/body/div/div/div/div[2]/form/button】for 10 seconds.
-8月 14, 2024 4:09:45 下午 cases.TurnOver Login
-信息: 登录成功!
-8月 14, 2024 4:09:45 下午 sqls.TurnOverSql main
-信息: 成功加载MySQL驱动！
-8月 14, 2024 4:09:46 下午 sqls.TurnOverSql main
-信息: update sql successfully
-8月 14, 2024 4:09:47 下午 tools.Browser explicitlyWait
-信息: explicitlyWait element【By.xpath: /html/body/div[1]/div[2]/div[1]/ul/ul/li[2]】for 10 seconds.
-8月 14, 2024 4:09:54 下午 tools.Browser explicitlyWait
-信息: explicitlyWait element【By.xpath: /html/body/div[1]/div[2]/div[2]/div[1]/div[2]】for 10 seconds.
-8月 14, 2024 4:09:54 下午 tools.Browser Assert
-信息: Assert element【By.xpath: /html/body/div[1]/div[2]/div[2]/div[1]/div[2]】与文本【流水记录】相同，断言成功！
-8月 14, 2024 4:09:54 下午 tools.Browser explicitlyWait
-信息: explicitlyWait element【By.xpath: /html/body/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[3]/div/div[1]/div/table/tbody/tr[1]/td[19]/div/button/span】for 10 seconds.
-8月 14, 2024 4:09:58 下午 tools.Browser explicitlyWait
-信息: explicitlyWait element【By.xpath: /html/body/div[3]/p】for 10 seconds.
-8月 14, 2024 4:09:58 下午 tools.Browser Assert
-信息: Assert element【By.xpath: /html/body/div[3]/p】与文本【开票成功！】相同，断言成功！
-8月 14, 2024 4:09:58 下午 cases.TurnOver Invoice
-信息: 开票成功!
-8月 14, 2024 4:09:58 下午 tools.Browser InitConfigData
-信息: Start to read values from properties file
-8月 14, 2024 4:09:59 下午 tools.Browser getBrowser
-信息: Launching Headless Chrome ...
-8月 14, 2024 4:10:00 下午 tools.Browser getBrowser
-信息: Open Domain: https://pay.huijinwei.com/oilAdmin/#/login
-8月 14, 2024 4:10:00 下午 tools.Browser getBrowser
-信息: Maximize browser...
-8月 14, 2024 4:10:00 下午 tools.Browser implicitlyWait
-信息: implicitlyWait for 10 seconds.
-8月 14, 2024 4:10:00 下午 tools.Browser explicitlyWait
-信息: explicitlyWait element【By.xpath: /html/body/div/div/div/div[2]/form/button】for 10 seconds.
-8月 14, 2024 4:10:01 下午 cases.MarketingReduction Login
-信息: 登录成功!
-8月 14, 2024 4:10:04 下午 tools.Browser explicitlyWait
-信息: explicitlyWait element【By.xpath: /html/body/div[1]/div[2]/div[1]/ul/ul/li[2]】for 10 seconds.
-8月 14, 2024 4:10:08 下午 tools.Browser explicitlyWait
-信息: explicitlyWait element【By.xpath: /html/body/div[1]/div[2]/div[2]/div[1]/div[2]】for 10 seconds.
-8月 14, 2024 4:10:09 下午 tools.Browser Assert
+8月 15, 2024 2:33:08 下午 tools.Browser Assert
 信息: Assert element【By.xpath: /html/body/div[1]/div[2]/div[2]/div[1]/div[2]】与文本【满减券】相同，断言成功！
-8月 14, 2024 4:10:09 下午 tools.Browser explicitlyWait
+8月 15, 2024 2:33:08 下午 tools.Browser explicitlyWait
 信息: explicitlyWait element【By.xpath: /html/body/div[1]/div[2]/div[2]/div[1]/div[3]/button】for 10 seconds.
-8月 14, 2024 4:10:11 下午 cases.MarketingReduction AddReductionCoupon
+8月 15, 2024 2:33:09 下午 cases.MarketingReduction AddReductionCoupon
 信息: 满减券新增成功!
-8月 14, 2024 4:10:12 下午 tools.Browser explicitlyWait
+8月 15, 2024 2:33:10 下午 tools.Browser explicitlyWait
 信息: explicitlyWait element【By.xpath: /html/body/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[3]/div/div[1]/div/table/tbody/tr[1]/td[11]/div/button[3]/span/span】for 10 seconds.
-8月 14, 2024 4:10:16 下午 tools.Browser explicitlyWait
+8月 15, 2024 2:33:14 下午 tools.Browser explicitlyWait
 信息: explicitlyWait element【By.xpath: /html/body/div[3]/p】for 10 seconds.
-8月 14, 2024 4:10:16 下午 tools.Browser Assert
+8月 15, 2024 2:33:14 下午 tools.Browser Assert
 信息: Assert element【By.xpath: /html/body/div[3]/p】与文本【优惠券下线成功】相同，断言成功！
-8月 14, 2024 4:10:16 下午 cases.MarketingReduction OfflineReductionCoupon
+8月 15, 2024 2:33:14 下午 cases.MarketingReduction OfflineReductionCoupon
 信息: 满减券下线成功!
-8月 14, 2024 4:10:16 下午 tools.Browser explicitlyWait
+8月 15, 2024 2:33:14 下午 tools.Browser explicitlyWait
 信息: explicitlyWait element【By.xpath: /html/body/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[3]/div/div[1]/div/table/tbody/tr[1]/td[11]/div/button[4]/span/span】for 10 seconds.
-8月 14, 2024 4:10:19 下午 tools.Browser explicitlyWait
+8月 15, 2024 2:33:17 下午 tools.Browser explicitlyWait
 信息: explicitlyWait element【By.xpath: /html/body/div[3]/p】for 10 seconds.
-8月 14, 2024 4:10:19 下午 tools.Browser Assert
+8月 15, 2024 2:33:17 下午 tools.Browser Assert
 信息: Assert element【By.xpath: /html/body/div[3]/p】与文本【删除成功】相同，断言成功！
-8月 14, 2024 4:10:19 下午 cases.MarketingReduction DeleteReductionCoupon
+8月 15, 2024 2:33:17 下午 cases.MarketingReduction DeleteReductionCoupon
 信息: 满减券删除成功!
-8月 14, 2024 4:10:19 下午 tools.Browser InitConfigData
-信息: Start to read values from properties file
-8月 14, 2024 4:10:19 下午 tools.Browser getBrowser
-信息: Launching Headless Chrome ...
-8月 14, 2024 4:10:20 下午 tools.Browser getBrowser
-信息: Open Domain: https://pay.huijinwei.com/oilAdmin/#/login
-8月 14, 2024 4:10:20 下午 tools.Browser getBrowser
-信息: Maximize browser...
-8月 14, 2024 4:10:20 下午 tools.Browser implicitlyWait
-信息: implicitlyWait for 10 seconds.
-8月 14, 2024 4:10:21 下午 tools.Browser explicitlyWait
-信息: explicitlyWait element【By.xpath: /html/body/div/div/div/div[2]/form/button】for 10 seconds.
-8月 14, 2024 4:10:22 下午 cases.MarketingDiscount Login
-信息: 登录成功!
-8月 14, 2024 4:10:24 下午 tools.Browser explicitlyWait
-信息: explicitlyWait element【By.xpath: /html/body/div[1]/div[2]/div[1]/ul/ul/li[2]】for 10 seconds.
-8月 14, 2024 4:10:28 下午 tools.Browser explicitlyWait
-信息: explicitlyWait element【By.xpath: /html/body/div[1]/div[2]/div[2]/div[1]/div[2]】for 10 seconds.
-8月 14, 2024 4:10:30 下午 tools.Browser InitConfigData
-信息: Start to read values from properties file
-8月 14, 2024 4:10:30 下午 tools.Browser getBrowser
-信息: Launching Headless Chrome ...
-8月 14, 2024 4:10:31 下午 tools.Browser getBrowser
-信息: Open Domain: https://pay.huijinwei.com/oilAdmin/#/login
-8月 14, 2024 4:10:31 下午 tools.Browser getBrowser
-信息: Maximize browser...
-8月 14, 2024 4:10:31 下午 tools.Browser implicitlyWait
-信息: implicitlyWait for 10 seconds.
-8月 14, 2024 4:10:32 下午 tools.Browser explicitlyWait
-信息: explicitlyWait element【By.xpath: /html/body/div/div/div/div[2]/form/button】for 10 seconds.
-8月 14, 2024 4:10:32 下午 cases.MarketingRecharge Login
-信息: 登录成功!
-8月 14, 2024 4:10:34 下午 tools.Browser explicitlyWait
-信息: explicitlyWait element【By.xpath: /html/body/div[1]/div[2]/div[1]/ul/ul/li[2]】for 10 seconds.
-8月 14, 2024 4:10:39 下午 tools.Browser explicitlyWait
-信息: explicitlyWait element【By.xpath: /html/body/div[1]/div[2]/div[2]/div[1]/div[2]】for 10 seconds.
-8月 14, 2024 4:10:39 下午 tools.Browser InitConfigData
-信息: Start to read values from properties file
-8月 14, 2024 4:10:39 下午 tools.Browser getBrowser
-信息: Launching Headless Chrome ...
-8月 14, 2024 4:10:40 下午 tools.Browser getBrowser
-信息: Open Domain: https://pay.huijinwei.com/oilAdmin/#/login
-8月 14, 2024 4:10:41 下午 tools.Browser getBrowser
-信息: Maximize browser...
-8月 14, 2024 4:10:41 下午 tools.Browser implicitlyWait
-信息: implicitlyWait for 10 seconds.
-8月 14, 2024 4:10:41 下午 tools.Browser explicitlyWait
-信息: explicitlyWait element【By.xpath: /html/body/div/div/div/div[2]/form/button】for 10 seconds.
-8月 14, 2024 4:10:42 下午 cases.Device Login
-信息: 登录成功!
-8月 14, 2024 4:10:44 下午 tools.Browser explicitlyWait
-信息: explicitlyWait element【By.xpath: /html/body/div[1]/div[2]/div[1]/ul/ul/li[2]】for 10 seconds.
-8月 14, 2024 4:10:46 下午 tools.Browser explicitlyWait
-信息: explicitlyWait element【By.xpath: /html/body/div[1]/div[2]/div[2]/div[1]/div[2]】for 10 seconds.
-8月 14, 2024 4:10:47 下午 tools.Browser Assert
-信息: Assert element【By.xpath: /html/body/div[1]/div[2]/div[2]/div[1]/div[2]】与文本【设备管理】相同，断言成功！
-8月 14, 2024 4:10:47 下午 tools.Browser explicitlyWait
-信息: explicitlyWait element【By.xpath: /html/body/div[1]/div[2]/div[2]/div[1]/div[3]/button】for 10 seconds.
-8月 14, 2024 4:10:48 下午 cases.Device AddDevice
-信息: 设备新增成功!
-8月 14, 2024 4:10:48 下午 tools.Browser explicitlyWait
-信息: explicitlyWait element【By.xpath: /html/body/div[1]/div[2]/div[2]/div[2]/div/div[1]/div[3]/div/div[1]/div/table/tbody/tr/td[7]/div/button[1]/span/span】for 10 seconds.
-8月 14, 2024 4:10:49 下午 tools.Browser Assert
-信息: Assert element【By.xpath: /html/body/div[3]/p】与文本【操作成功！】相同，断言成功！
-8月 14, 2024 4:10:49 下午 cases.Device ModifyDevice
-信息: 设备修改成功!
-8月 14, 2024 4:10:49 下午 tools.Browser explicitlyWait
-信息: explicitlyWait element【By.xpath: /html/body/div[1]/div[2]/div[2]/div[2]/div/div[1]/div[3]/div/div[1]/div/table/tbody/tr/td[7]/div/button[2]/span/span】for 10 seconds.
-8月 14, 2024 4:10:53 下午 tools.DeleteExtraLogs Login
-信息: 已删除多余的log文件: my.log.8.lck
-8月 14, 2024 4:10:53 下午 tools.DeleteExtraLogs Login
-信息: 已删除多余的log文件: my.log.6
-8月 14, 2024 4:10:53 下午 tools.DeleteExtraLogs Login
-信息: 已删除多余的log文件: my.log.1
-8月 14, 2024 4:10:53 下午 tools.DeleteExtraLogs Login
-信息: 已删除多余的log文件: my.log.8
-8月 14, 2024 4:10:53 下午 tools.DeleteExtraLogs Login
-信息: 已删除多余的log文件: my.log.7
-8月 14, 2024 4:10:53 下午 tools.DeleteExtraLogs Login
-信息: 已删除多余的log文件: my.log.4.lck
-8月 14, 2024 4:10:53 下午 tools.DeleteExtraLogs Login
-信息: 已删除多余的log文件: my.log.5.lck
-8月 14, 2024 4:10:53 下午 tools.DeleteExtraLogs Login
-信息: 已删除多余的log文件: my.log.7.lck
-8月 14, 2024 4:10:53 下午 tools.DeleteExtraLogs Login
-信息: 已删除多余的log文件: my.log.6.lck
-8月 14, 2024 4:10:53 下午 tools.DeleteExtraLogs Login
-信息: 已删除多余的log文件: my.log.2.lck
-8月 14, 2024 4:10:53 下午 tools.DeleteExtraLogs Login
-信息: 已删除多余的log文件: my.log.3.lck
-8月 14, 2024 4:10:53 下午 tools.DeleteExtraLogs Login
-信息: 已删除多余的log文件: my.log.2
-8月 14, 2024 4:10:53 下午 tools.DeleteExtraLogs Login
-信息: 已删除多余的log文件: my.log.lck
-8月 14, 2024 4:10:53 下午 tools.DeleteExtraLogs Login
-信息: 已删除多余的log文件: my.log.5
-8月 14, 2024 4:10:53 下午 tools.DeleteExtraLogs Login
-信息: 已删除多余的log文件: my.log.1.lck
-8月 14, 2024 4:10:53 下午 tools.DeleteExtraLogs Login
-信息: 已删除多余的log文件: my.log.4
-8月 14, 2024 4:10:53 下午 tools.DeleteExtraLogs Login
-信息: 已删除多余的log文件: my.log.3
